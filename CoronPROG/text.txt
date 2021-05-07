@@ -1,0 +1,1 @@
+Denna kod kommer att innehålla medelvärdet på coronafall varje dag under pandemins gågng.
