@@ -18,3 +18,9 @@ plt.ylabel('y')
 plt.title('Covid-19 dödsfall Sverige')
 plt.legend()
 plt.show()
+
+ask = int(input("Vill du kolla hur vaccinationen går? Ja/Nej"))
+if ask == 'Ja':
+    open("VaccinationByLand.py")
+if ask == 'Nej':
+    break
