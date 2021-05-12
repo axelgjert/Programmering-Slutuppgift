@@ -12,11 +12,11 @@ countries = ['United States', 'China', 'United Kingdom', 'Sweden']
 df = df[df['location'].isin(countries)]
 
 pivot = pd.pivot_table(
-    data=df,                                    # What dataframe to use
-    index='date',                               # The "rows" of your dataframe
-    columns='location',                         # What values to show as columns
-    values='total_vaccinations_per_hundred',    # What values to aggregate
-    aggfunc='mean',                             # How to aggregate data
+    data=df,
+    index='date',
+    columns='location',
+    values='total_vaccinations_per_hundred',
+    aggfunc='mean',
     )
 
 pivot = pivot.fillna(method='ffill')
@@ -53,7 +53,7 @@ ax.xaxis.set_major_formatter(date_form)
 plt.xticks(rotation=45)
 plt.ylim(0,100)
 
-#Fixar axlarna
+#Fixar utseende och färger på axlarna
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_color('#3f3f3f')
@@ -61,10 +61,10 @@ ax.spines['left'].set_color('#3f3f3f')
 ax.tick_params(colors='#3f3f3f')
 ax.grid(alpha=0.1)
 
-#Namnger axlarna
-plt.ylabel('Total Vaccinations per 100 People', fontsize=12, alpha=0.9)
-plt.xlabel('Date', fontsize=12, alpha=0.9)
-plt.title('COVID-19 Vaccinations over Time', fontsize=18, weight='bold', alpha=0.9)
+#Namnger axlarna och ger storlek på texten
+plt.ylabel('Vaccination per 100 personer', fontsize=12, alpha=0.9)
+plt.xlabel('Datum', fontsize=12, alpha=0.9)
+plt.title('COVID-19 Vaccinationer över Tid', fontsize=18, weight='bold', alpha=0.9)
 
 # Visar våran fina plot
 plt.show()
