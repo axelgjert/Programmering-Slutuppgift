@@ -21,6 +21,6 @@ plt.show()
 
 ask = int(input("Vill du kolla hur vaccinationen går? Ja/Nej"))
 if ask == 'Ja':
-    open("VaccinationByLand.py")
+    file.open("VaccinationByLand.py")
 if ask == 'Nej':
     break
