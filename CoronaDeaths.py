@@ -8,7 +8,6 @@ datum = df['Date']
 antal_döda = df['National_Daily_Deaths']
 
 fig = px.line(x = datum, y = antal_döda, title = 'Antal döda under en tidsperiod', labels = {'x':'Månad', 'y':'Död'})
-pig = px.scatter(x = datum, y = antal_döda, title = 'Antal döda under en tidsperiod', labels = {'x':'Månad', 'y':'Död'})
 
 fig.show()
 
